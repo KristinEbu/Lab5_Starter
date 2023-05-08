@@ -23,10 +23,12 @@ function init() {
     else if(event.target.value == "party-horn"){
       image[0].src = "assets/images/party-horn.svg"
       sound[0].src = "assets/audio/party-horn.mp3"
-      button.addEventListener("click", (e) => {
-        jsConfetti.addConfetti()
-      })
     }
+    button.addEventListener("click", (e) => {
+      if(event.target.value == "party-horn"){
+        jsConfetti.addConfetti()
+      }
+    })
   })
 
   volume.addEventListener("input", (event) => {
